@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Boundary
       labels={['main layout']}
-      color="orange"
+      color="blue"
       animateRerendering={false}
     >
       <div className="space-y-9">
@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <CategoryNav categories={categories} />
           <ClickCounter />
         </div>
-
+        <hr/>
         <div>{children}</div>
       </div>
     </Boundary>

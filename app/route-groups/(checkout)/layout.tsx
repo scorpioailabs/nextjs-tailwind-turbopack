@@ -1,22 +1,22 @@
-import { Boundary } from '@/ui/Boundary';
-import { TabNavItem } from '@/ui/TabNavItem';
-import React from 'react';
+import { fetchCategories } from "@/lib/getCategories";
+import { Boundary } from "@/ui/Boundary";
+import ClickCounter from "@/ui/ClickCounter";
+import React, { use } from "react";
+import CategoryNav from '../CategoryNav';
 
+// export function Layout
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const categories = use(fetchCategories());
   return (
-    <Boundary
-      labels={['checkout layout']}
-      color="blue"
-      animateRerendering={false}
-    >
-      <div className="space-y-9">
+    <Boundary labels={['books layout']} color="blue" animateRerendering={false}>
+      <div className="text-2xl font-bold">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <TabNavItem href="/route-groups">Back</TabNavItem>
-          </div>
+          <CategoryNav categories={categories} />
+          <ClickCounter />
         </div>
-
-        <div>{children}</div>
+        <div>
+          {children}
+        </div>
       </div>
     </Boundary>
   );
