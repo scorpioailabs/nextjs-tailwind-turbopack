@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import React from 'react';
 import AddressBar from '@/ui/AddressBar';
 import GlobalNav from './GlobalNav';
+import SideBar from '@/ui/SideBar';
 
 export default function RootLayout({
   children,
@@ -19,6 +20,10 @@ export default function RootLayout({
             <GlobalNav />
           </div>
 
+          {/* use sidebar and style */}
+          <div className="col-start-2">
+            <SideBar />
+          </div>
           <div className="col-start-3 space-y-6">
             <AddressBar />
 
