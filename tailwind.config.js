@@ -15,6 +15,8 @@ module.exports = {
           cyan: '#50E3C2',
           orange: '#F5A623',
           violet: '#7928CA',
+          mauve: '#E8C0C8',
+          lime: '#00FF00',
         },
       },
       keyframes: ({ theme }) => ({
