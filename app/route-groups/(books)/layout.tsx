@@ -3,6 +3,7 @@ import { Boundary } from "@/ui/Boundary";
 import ClickCounter from "@/ui/ClickCounter";
 import React, { use } from "react";
 import CategoryNav from '../CategoryNav';
+import TestCard from "@/ui/TestCard";
 
 // export function Layout
 export default function Layout({ children }: { children: React.ReactNode }) {

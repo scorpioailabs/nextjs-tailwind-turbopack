@@ -4,6 +4,7 @@ import AddressBar from '@/ui/AddressBar';
 import GlobalNav from './GlobalNav';
 import SideBar from '@/ui/SideBar';
 import Footer from '@/ui/Footer';
+import TestCard from '@/ui/TestCard';
 
 export default function RootLayout({
   children,
@@ -27,7 +28,6 @@ export default function RootLayout({
           </div>
           <div className="col-start-3 space-y-6">
             <AddressBar />
-
             <div className="rounded-xl border border-zinc-800 bg-black p-8">
               {children}
             </div>
